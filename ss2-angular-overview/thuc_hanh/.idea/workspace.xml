@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54a62b24-39d3-4328-bae1-05ec3a2e1080" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/.idea/angular-furama.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/.vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/about-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/about-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/about-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/about-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/carousel-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/carousel-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/room-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/room-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/room-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/team-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/team-2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/team-3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/team-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/testimonial-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/testimonial-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/testimonial-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/testimonial-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/img/video.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/animate/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/animate/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/counterup/counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/easing/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/easing/easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/assets/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/assets/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/assets/owl.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/assets/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/assets/owl.theme.green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/assets/owl.theme.green.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/assets/owl.video.play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/owlcarousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/tempusdominus/js/moment-timezone.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/tempusdominus/js/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/waypoints/links.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/waypoints/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/wow/wow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/lib/wow/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_accordion.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_breadcrumb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_button-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_carousel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_close.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_containers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_helpers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_images.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_modal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_navbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_offcanvas.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_popover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_root.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_spinners.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_toasts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_tooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_transitions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_type.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/bootstrap-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/bootstrap-reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/bootstrap-utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/forms/_floating-labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/forms/_form-check.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/forms/_form-control.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/forms/_form-range.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/forms/_form-select.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/forms/_form-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/forms/_input-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/forms/_labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/forms/_validation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/helpers/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/helpers/_colored-links.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/helpers/_position.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/helpers/_ratio.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/helpers/_stretched-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/helpers/_text-truncation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/helpers/_visually-hidden.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_box-shadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_caret.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_color-scheme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_container.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_deprecate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_lists.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_reset-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_resize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_table-variants.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_text-truncate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/mixins/_visually-hidden.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/utilities/_api.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/assets/scss/bootstrap/scss/vendor/_rfs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/angular-furama/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/thuc_hanh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1_typescript/bai_tap/typescript-fibonacci/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss1_typescript/bai_tap/typescript-fibonacci/src/main.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2AHfxeNlYXYgKldR96rtWrlRkAz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54a62b24-39d3-4328-bae1-05ec3a2e1080" name="Changes" comment="" />
+      <created>1654671679031</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654671679031</updated>
+      <workItem from="1654671680159" duration="1129000" />
+      <workItem from="1654678913994" duration="202000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
