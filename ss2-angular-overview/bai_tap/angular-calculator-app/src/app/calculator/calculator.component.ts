@@ -6,8 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
-  input = '';
-  result = '';
+  result: number;
 
   constructor() {
   }
@@ -15,18 +14,21 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  addValue(value) {
-    this.input += value;
-  }
-
-  calculate() {
-    // tslint:disable-next-line:no-eval
-    this.result = eval(this.input);
-  }
-
-  remove() {
-    this.input = '';
+  calculation(number1: string, number2: string, operation: string) {
+    switch (operation) {
+      case '+':
+        this.result = Number(number1) + Number(number2);
+        break;
+      case '-':
+        this.result = Number(number1) - Number(number2);
+        break;
+      case '*':
+        this.result = Number(number1) * Number(number2);
+        break;
+      case '/':
+        this.result = Number(number1) / Number(number2);
+        break;
+    }
   }
 
 

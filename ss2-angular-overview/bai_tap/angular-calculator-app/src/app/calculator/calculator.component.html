@@ -1,37 +1,14 @@
 
 <body>
 <h1>calculator</h1>
-<table border="">
-  <tr>
-    <td colspan="4"><input type="text" value="{{input}}"/></td>
-  </tr>
-  <tr>
-    <td colspan="3"><input type="text" value="{{result}}"/></td>
-    <td><input type="button" value="c" (click)="remove()"/> </td>
-  </tr>
-  <tr>
-    <td><input type="button" value="1" (click)="addValue('1')"/></td>
-    <td><input type="button" value="2" (click)="addValue('2')"/></td>
-    <td><input type="button" value="3" (click)="addValue('3')"/></td>
-    <td><input type="button" value="/" (click)="addValue('/')"/></td>
-  </tr>
-  <tr>
-    <td><input type="button" value="4" (click)="addValue('4')"/></td>
-    <td><input type="button" value="5" (click)="addValue('5')"/></td>
-    <td><input type="button" value="6" (click)="addValue('6')"/></td>
-    <td><input type="button" value="-" (click)="addValue('-')"/></td>
-  </tr>
-  <tr>
-    <td><input type="button" value="7" (click)="addValue('7')"/></td>
-    <td><input type="button" value="8" (click)="addValue('8')"/></td>
-    <td><input type="button" value="9" (click)="addValue('9')"/></td>
-    <td><input type="button" value="+" (click)="addValue('+')"/></td>
-  </tr>
-  <tr>
-    <td><input type="button" value="." (click)="addValue('.')"/></td>
-    <td><input type="button" value="0" (click)="addValue('0')"/></td>
-
-    <td><input type="button" value="=" (click)="calculate()"/></td>
-    <td><input type="button" value="*" (click)="addValue('*')"/></td>
-  </tr>
-</table>
+  <label>Number 1 :</label>
+  <input type="number" #number1/>
+  <label>Number 2 :</label>
+  <input type="number" #number2/>
+<div>
+  <button type="submit" #operation1 value="+" (click)="calculation(number1.value, number2.value, operation1.value)"> Addition (+)</button>
+  <button type="submit" #operation2 value="-" (click)="calculation(number1.value, number2.value, operation2.value)"> Subtraction (-)</button>
+  <button type="submit" #operation3 value="*" (click)="calculation(number1.value, number2.value, operation3.value)"> Multiplication (*)</button>
+  <button type="submit" #operation4 value="/" (click)="calculation(number1.value, number2.value, operation4.value)"> Division (/)</button>
+</div>
+  <h1>Result:{{result}}</h1>
