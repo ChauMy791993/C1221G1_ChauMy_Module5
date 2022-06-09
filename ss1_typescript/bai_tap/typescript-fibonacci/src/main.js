@@ -21,7 +21,7 @@ function fibonacci(total, count) {
         return list;
     }
 }
-fibonacci(10, 0);
+fibonacci(10, 1);
 for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
     var number = list_1[_i];
     sum += number;
