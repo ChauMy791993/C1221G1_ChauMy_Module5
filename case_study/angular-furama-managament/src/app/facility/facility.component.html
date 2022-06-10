@@ -1,4 +1,3 @@
-<app-header></app-header>
 <!-- Page Header Start -->
 <div class="container-fluid page-header mb-5 p-0" style="background-image: url(assets/img/carousel-1.jpg);">
   <div class="container-fluid page-header-inner py-5">
@@ -68,7 +67,7 @@
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
       <h6 class="section-title text-center text-primary text-uppercase">Our Facility</h6>
       <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Facility</span></h1>
-      <a class="btn btn-primary mb-3" style="background-color: #55acee;" href="facility-create.html" role="button">
+      <a class="btn btn-primary mb-3" style="background-color: #55acee;" [routerLink]="['/facility/create']" role="button">
         Add New Facility
       </a>
     </div>
@@ -296,4 +295,3 @@
     </div>
   </div>
 </div>
-<app-footer></app-footer>

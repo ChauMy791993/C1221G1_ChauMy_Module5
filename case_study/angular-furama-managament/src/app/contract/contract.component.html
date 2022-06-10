@@ -1,4 +1,3 @@
-<app-header></app-header>
 <!-- Page Header Start -->
 <div class="container-fluid page-header mb-5 p-0" style="background-image: url(assets/img/carousel-1.jpg);">
   <div class="container-fluid page-header-inner py-5">
@@ -22,7 +21,7 @@
     <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
       <h6 class="section-title text-center text-primary text-uppercase">Contract Us</h6>
       <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
-              <a class="btn btn-primary mb-3" style="background-color: #55acee;" href="customer-create.html"
+              <a class="btn btn-primary mb-3" style="background-color: #55acee;" [routerLink]="['/contract/create']"
                  role="button">
                 Add New Contract
               </a>
@@ -116,4 +115,3 @@
     </div>
   </div>
 </div>
-<app-footer></app-footer>
