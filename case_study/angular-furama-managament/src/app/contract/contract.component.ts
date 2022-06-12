@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {contracts} from '../data/contract';
 
 @Component({
   selector: 'app-contract',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contract.component.css']
 })
 export class ContractComponent implements OnInit {
+  contracts = contracts;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

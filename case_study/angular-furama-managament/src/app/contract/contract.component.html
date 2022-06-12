@@ -37,49 +37,28 @@
 <!--      </div>-->
 <!--    </nav>-->
     <div>
-      <table class="table table-striped mx-auto w-75">
+      <table class="table table-striped mx-auto wow fadeInLeft " data-wow-delay="0.6s">
         <thead>
         <tr class="table-warning">
           <th>#</th>
           <th>Start date</th>
           <th>End date</th>
           <th>Deposit</th>
-          <th>Total Money</th>
           <th>Customer</th>
-          <th>Employee</th>
+          <th>Phone</th>
           <th>Facility</th>
           <th class="text-center" colspan="2">Action</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>1</td>
-          <td>06-06-2022</td>
-          <td>07-06-2022</td>
-          <td>200000</td>
-          <td>0</td>
-          <td>Nguyễn Thị Hào</td>
-          <td>Hồ thị Yến</td>
-          <td>Room Twin 01</td>
-          <td>
-            <a type="button" class="btn btn-warning mb-2 w-100 text-white"
-               href="customer-edit.html">Edit</a>
-          </td>
-          <td>
-            <a type="button" class="btn btn-danger rounded mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Delete
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>02-06-2022</td>
-          <td>04-06-2022</td>
-          <td>500000</td>
-          <td>0</td>
-          <td>Nguyễn Hữu Hà</td>
-          <td>Trường Đình Nghệ</td>
-          <td>Villa Beach Front</td>
+        <tr *ngFor="let contract of contracts,index as index">
+          <td>{{index + 1}}</td>
+          <td>{{contract.startDate | date: "dd/mm/yyyy"}}</td>
+          <td>{{contract.endDate | date: "dd/mm/yyyy"}}</td>
+          <td>{{contract.deposit | currency: "$"}}</td>
+          <td>{{contract.customer.customerName}}</td>
+          <td>{{contract.customer.phone}}</td>
+          <td>{{contract.facility.facilityName}}</td>
           <td>
             <a type="button" class="btn btn-warning mb-2 w-100 text-white"
                href="customer-edit.html">Edit</a>
