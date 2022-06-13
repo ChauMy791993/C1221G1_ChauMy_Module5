@@ -1,0 +1,64 @@
+<form [formGroup]="registerForm" (ngSubmit)="createRegister()">
+  <label>Email</label>
+  <input type="email" formControlName="email"><br><br>
+  <p style="color: red" *ngIf="registerForm.controls.email.hasError('required') && registerForm.controls.email.touched">
+    not null</p>
+  <p style="color: red" *ngIf="registerForm.controls.email.hasError('email') && registerForm.controls.email.touched">
+    Email invalidate</p>
+
+  <label>Password</label>
+  <input type="text" formControlName="password"><br><br>
+  <p style="color: red"
+     *ngIf="registerForm.controls.password.hasError('required') && registerForm.controls.password.touched">
+    not null</p>
+  <p style="color: red"
+     *ngIf="registerForm.controls.password.hasError('minlength') && registerForm.controls.password.touched">
+    Min length is 6</p>
+
+  <label>Confirm password</label>
+  <input type="text" formControlName="confirmPassword"><br><br>
+  <p style="color: red"
+     *ngIf="registerForm.controls.confirmPassword.hasError('required') && registerForm.controls.confirmPassword.touched">
+    not null</p>
+  <p style="color: red"
+     *ngIf="registerForm.controls.confirmPassword.hasError('minlength') && registerForm.controls.confirmPassword.touched">
+    Min length is 6</p>
+  <p style="color: red" *ngIf="registerForm.hasError('invalid0')">
+    Password and Confirm password the same </p>
+
+  <label>country</label>
+  <select formControlName="country">
+    <option value="">--select--</option>
+    <option value="1">America</option>
+    <option value="2">VietNam</option>
+    <option value="3">Korea</option>
+  </select><br><br>
+  <p style="color: red"
+     *ngIf="registerForm.controls.country.hasError('required') && registerForm.controls.country.touched">
+    not null</p>
+
+  <label>age</label>
+  <input type="number" formControlName="age"><br><br>
+  <p style="color: red" *ngIf="registerForm.controls.age.hasError('required') && registerForm.controls.age.touched">
+    not null</p>
+  <p style="color: red" *ngIf="registerForm.controls.age.hasError('min') && registerForm.controls.age.touched">
+    Age > 18</p>
+
+  <label>Gender:</label>
+  <input type="radio" formControlName="gender" id="female" value="0">
+  <label for="female">female</label>
+  <input type="radio" formControlName="gender" id="male" value="1">
+  <label for="male">male</label><br><br>
+  <p style="color: red"
+     *ngIf="registerForm.controls.gender.hasError('required') && registerForm.controls.gender.touched">
+    not null</p>
+
+  <label>Phone</label>
+  <input type="text" formControlName="phone"><br><br>
+  <p style="color: red" *ngIf="registerForm.controls.phone.hasError('required') && registerForm.controls.phone.touched">
+    not null</p>
+  <p style="color: red" *ngIf="registerForm.controls.phone.hasError('pattern') && registerForm.controls.phone.touched">
+    (+84)XX.XXXX.XXX OR (+84)XXX.XXXX.XXX </p>
+
+  <button type="submit">Create</button>
+</form>
