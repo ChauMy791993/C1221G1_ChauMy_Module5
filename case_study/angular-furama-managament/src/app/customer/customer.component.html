@@ -46,7 +46,7 @@
           <td>{{index + 1}}</td>
           <td>{{customer.customerCode}}</td>
           <td>{{customer.customerName}}</td>
-          <td>{{customer.dateOfBirth |date}}</td>
+          <td>{{customer.dateOfBirth |date: "dd/MM/yyyy"}}</td>
           <td *ngIf="customer.gender == 0">Nữ</td>
           <td *ngIf="customer.gender == 1">Nam</td>
           <td>{{customer.phone}}</td>

@@ -53,8 +53,8 @@
         <tbody>
         <tr *ngFor="let contract of contracts,index as index">
           <td>{{index + 1}}</td>
-          <td>{{contract.startDate | date: "dd/mm/yyyy"}}</td>
-          <td>{{contract.endDate | date: "dd/mm/yyyy"}}</td>
+          <td>{{contract.startDate | date: "dd/MM/yyyy"}}</td>
+          <td>{{contract.endDate | date: "dd/MM/yyyy"}}</td>
           <td>{{contract.deposit | currency: "$"}}</td>
           <td>{{contract.customer.customerName}}</td>
           <td>{{contract.customer.phone}}</td>

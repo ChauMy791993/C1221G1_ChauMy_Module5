@@ -40,73 +40,111 @@
 
       <div class="col-lg-6">
         <div class="wow fadeInUp" data-wow-delay="0.2s">
-          <form>
+          <form [formGroup]="customerForm" (ngSubmit)="createCustomer()">
             <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="code" placeholder="Customer code">
+                  <input type="text" formControlName="customerCode" class="form-control" id="code" placeholder="Customer code">
                   <label for="code">Customer code</label>
                 </div>
+                <p style="color: red" *ngIf="customerForm.controls.customerCode.hasError('required')&& customerForm.controls.customerCode.touched">
+                  Not Null
+                </p>
+                <p style="color: red" *ngIf="customerForm.controls.customerCode.hasError('pattern')&& customerForm.controls.customerCode.touched">
+                  Format : KH-XXXX
+                </p>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="name" placeholder="Customer Name">
+                  <input type="text" formControlName="customerName" class="form-control" id="name" placeholder="Customer Name">
                   <label for="name">Customer Name</label>
+                  <p style="color: red" *ngIf="customerForm.controls.customerName.hasError('required')&& customerForm.controls.customerName.touched">
+                    Not Null
+                  </p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="date" class="form-control" id="birthday" placeholder="Birthday">
+                  <input type="date" formControlName="dateOfBirth" class="form-control" id="birthday" placeholder="Birthday">
                   <label for="birthday">Birthday</label>
+                  <p style="color: red" *ngIf="customerForm.controls.dateOfBirth.hasError('required')&& customerForm.controls.dateOfBirth.touched">
+                    Not Null
+                  </p>
+                  <p style="color: red" *ngIf="customerForm.controls.dateOfBirth.hasError('pattern')&& customerForm.controls.dateOfBirth.touched">
+                    Format : DD/MM/YYYY
+                  </p>
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="form-floating">
-                  <select class="form-select" id="select4">
-                    <option value="0">--select--</option>
+                  <select class="form-select" formControlName="gender" id="select4">
+                    <option value="">--select--</option>
                     <option value="1">Name</option>
                     <option value="2">Nữ</option>
                   </select>
                   <label for="select4">Gender</label>
+                  <p style="color: red" *ngIf="customerForm.controls.gender.hasError('required')&& customerForm.controls.gender.touched">
+                    Not Null
+                  </p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="card" placeholder="Id_Card">
+                  <input type="text" formControlName="idCard" class="form-control" id="card" placeholder="Id_Card">
                   <label for="card">Id_Card</label>
+                  <p style="color: red" *ngIf="customerForm.controls.idCard.hasError('required')&& customerForm.controls.idCard.touched">
+                    Not Null
+                  </p>
+                  <p style="color: red" *ngIf="customerForm.controls.idCard.hasError('pattern')&& customerForm.controls.idCard.touched">
+                    Format: XXXXXXXXX or XXXXXXXXXXXX (X is number 0-9)
+                  </p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="phone" placeholder="Phone">
+                  <input type="text" formControlName="phone" class="form-control" id="phone" placeholder="Phone">
                   <label for="phone">Phone</label>
+                  <p style="color: red" *ngIf="customerForm.controls.phone.hasError('required')&& customerForm.controls.phone.touched">
+                    Not Null
+                  </p>
+                  <p style="color: red" *ngIf="customerForm.controls.phone.hasError('pattern')&& customerForm.controls.phone.touched">
+                    Format: 090xxxxxxx or 091xxxxxxx or (84)+90xxxxxxx or (84)+91xxxxxxx
+                  </p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="email" placeholder="Email">
+                  <input type="text" formControlName="email" class="form-control" id="email" placeholder="Email">
                   <label for="email">Email</label>
+                  <p style="color: red" *ngIf="customerForm.controls.email.hasError('required')&& customerForm.controls.email.touched">
+                    Not Null
+                  </p>
+                  <p style="color: red" *ngIf="customerForm.controls.email.hasError('email')&& customerForm.controls.email.touched">
+                    Email invalidate
+                  </p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <select class="form-select" id="select1">
-                    <option value="0">--select--</option>
-                    <option value="1">Diamond</option>
-                    <option value="2">Platinium</option>
-                    <option value="3">Gold</option>
-                    <option value="3">Silver</option>
-                    <option value="3">Member</option>
+                  <select class="form-select" formControlName="customerType" id="select1">
+                    <option [ngValue]="null">--select--</option>
+                    <option [ngValue]="id" *ngFor="let id of customerTypes">{{id.customerTypeName}}</option>
                   </select>
                   <label for="select1">Customer_Type</label>
+                  <p style="color: red" *ngIf="customerForm.controls.customerType.hasError('required')&& customerForm.controls.customerType.touched">
+                    Not Null
+                  </p>
                 </div>
               </div>
 
               <div class="col-12">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="address" placeholder="Address">
+                  <input type="text" formControlName="address" class="form-control" id="address" placeholder="Address">
                   <label for="address">Address</label>
+                  <p style="color: red" *ngIf="customerForm.controls.address.hasError('required')&& customerForm.controls.address.touched">
+                    Not Null
+                  </p>
                 </div>
               </div>
 
@@ -117,7 +155,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <button class="btn btn-danger w-100 py-3" type="submit">Cancel</button>
+                  <button class="btn btn-danger w-100 py-3" type="reset">Cancel</button>
                 </div>
               </div>
             </div>

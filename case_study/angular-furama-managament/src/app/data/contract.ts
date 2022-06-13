@@ -78,7 +78,7 @@ export const contracts: Contract[] = [
   {
     id: 3,
     startDate: '2022-12-12',
-    endDate: '2022-12-08',
+    endDate: '2022-12-14',
     deposit: 0,
     customer: {
       customerId: 5,

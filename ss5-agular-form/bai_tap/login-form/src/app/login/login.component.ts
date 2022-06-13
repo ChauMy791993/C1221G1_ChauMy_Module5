@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createLogin() {
+  loginWeb() {
     if (this.loginForm.valid) {
       this.login.push(this.loginForm.value);
     }
