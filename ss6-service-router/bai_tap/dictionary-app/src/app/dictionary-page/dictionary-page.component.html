@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Word</th>
+    <th>Detail</th>
+  </tr>
+  <tr *ngFor="let key of words">
+    <td>{{key.id}}</td>
+    <td>{{key.word}}</td>
+    <td><a [routerLink]="['/detail',key.id]">Detail</a></td>
+  </tr>
+</table>
