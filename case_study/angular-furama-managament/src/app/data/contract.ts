@@ -1,4 +1,4 @@
-import {Contract} from '../model/contract';
+import {Contract} from '../contract/model/contract';
 
 export const contracts: Contract[] = [
   {

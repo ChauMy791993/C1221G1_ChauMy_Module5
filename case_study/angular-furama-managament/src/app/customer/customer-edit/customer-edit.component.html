@@ -40,7 +40,7 @@
 
       <div class="col-lg-6">
         <div class="wow fadeInUp" data-wow-delay="0.2s">
-          <form [formGroup]="customerForm" (ngSubmit)="editCustomer()">
+          <form [formGroup]="customerForm" (ngSubmit)="updateCustomer(customerId)">
             <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
@@ -80,8 +80,8 @@
                 <div class="form-floating">
                   <select class="form-select" formControlName="gender" id="select4">
                     <option value="">--select--</option>
-                    <option value="1">Name</option>
-                    <option value="2">Nữ</option>
+                    <option value="0">Nữ</option>
+                    <option value="1">Nam</option>
                   </select>
                   <label for="select4">Gender</label>
                   <p style="color: red" *ngIf="customerForm.controls.gender.hasError('required')&& customerForm.controls.gender.touched">
@@ -127,7 +127,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <select class="form-select" formControlName="customerType" id="select1">
+                  <select class="form-select" formControlName="customerType" [compareWith]="compareFn" id="select1">
                     <option [ngValue]="null">--select--</option>
                     <option [ngValue]="id" *ngFor="let id of customerTypes">{{id.customerTypeName}}</option>
                   </select>

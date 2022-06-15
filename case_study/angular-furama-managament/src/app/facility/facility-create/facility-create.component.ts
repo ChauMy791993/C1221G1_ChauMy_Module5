@@ -1,9 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {FacilityService} from '../../service/facility.service';
-import {facilityTypes} from '../../data/facility-type';
-import {rentTypes} from '../../data/rent-type';
+import {FacilityService} from '../facility.service';
 import {Router} from '@angular/router';
+import {FacilityType} from '../model/facility-type';
+import {RentType} from '../model/rent-type';
+import {FacilityTypeService} from '../facility-type.service';
+import {RentTypeService} from '../rent-type.service';
 
 @Component({
   selector: 'app-facility-create',
@@ -12,15 +14,18 @@ import {Router} from '@angular/router';
 })
 export class FacilityCreateComponent implements OnInit {
   facilityForm: FormGroup;
-  facilityTypes = facilityTypes;
-  rentTypes = rentTypes;
+  facilityTypes: FacilityType[] = [];
+  rentTypes: RentType[] = [];
 
-  constructor(private facilityService: FacilityService, private router: Router) {
+  constructor(private facilityService: FacilityService, private facilityTypeService: FacilityTypeService,
+              private rentTypeService: RentTypeService, private router: Router) {
   }
 
   ngOnInit(): void {
+    this.facilityTypes = this.facilityTypeService.getAllFacilityType();
+    this.rentTypes = this.rentTypeService.getAllRentType();
     this.facilityForm = new FormGroup({
-      facilityCode: new FormControl('', [Validators.required]),
+      facilityCode: new FormControl('', [Validators.required, Validators.pattern('^DV-\\d{4}$')]),
       facilityName: new FormControl('', [Validators.required, Validators.pattern('^[A-Za-z ]+$')]),
       facilityArea: new FormControl('', [Validators.required]),
       facilityCost: new FormControl('', [Validators.required]),
@@ -36,8 +41,8 @@ export class FacilityCreateComponent implements OnInit {
 
   createFacility() {
     if (this.facilityForm.valid) {
-      this.facilityService.save(this.facilityForm.value);
-      this.router.navigate(['/facility']);
+      this.facilityService.saveFacility(this.facilityForm.value);
+      this.router.navigate(['/facility/facility-list']);
     }
   }
 }

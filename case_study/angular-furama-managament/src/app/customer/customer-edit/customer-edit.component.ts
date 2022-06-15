@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {customerTypes} from '../../data/customer-type';
-import {CustomerService} from '../../service/customer.service';
-import {ActivatedRoute, ParamMap} from '@angular/router';
-import {Customer} from '../../model/customer';
+import {CustomerService} from '../customer.service';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
+import {Customer} from '../model/customer';
+import {CustomerTypeService} from '../customer-type.service';
+import {CustomerType} from '../model/customer-type';
 
 @Component({
   selector: 'app-customer-edit',
@@ -12,33 +13,39 @@ import {Customer} from '../../model/customer';
 })
 export class CustomerEditComponent implements OnInit {
   customerForm: FormGroup;
-  customerTypes = customerTypes;
-  confirmCustomer: Customer;
+  customerTypes: CustomerType[] = [];
+  customerId: number;
 
-  constructor(private customerService: CustomerService, private activatedRoute: ActivatedRoute) {
-    activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
-      const customerId = paramMap.get('customerId');
-      if (customerId != null) {
-        this.confirmCustomer = this.customerService.findById(Number(customerId));
-      }
+  constructor(private customerService: CustomerService, private customerTypeService: CustomerTypeService,
+              private activatedRoute: ActivatedRoute, private router: Router) {
+    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
+      this.customerId = +paramMap.get('id');
+      const customer = this.customerService.findById(this.customerId);
+      this.customerTypes = this.customerTypeService.getAllCustomerType();
+      this.customerForm = new FormGroup({
+        customerCode: new FormControl(customer.customerCode, [Validators.required, Validators.pattern('^KH-\\d{4}$')]),
+        customerName: new FormControl(customer.customerName, [Validators.required]),
+        dateOfBirth: new FormControl(customer.dateOfBirth, [Validators.required, Validators.pattern('^\\d{4}-\\d{2}-\\d{2}$')]),
+        gender: new FormControl(customer.gender, [Validators.required]),
+        idCard: new FormControl(customer.idCard, [Validators.required, Validators.pattern('^\\d{9}$')]),
+        phone: new FormControl(customer.phone, [Validators.required, Validators.pattern('^(091|090|\\(\\+84\\)90|\\(\\+84\\)91)\\d{7}$')]),
+        address: new FormControl(customer.address, [Validators.required]),
+        email: new FormControl(customer.email, [Validators.required, Validators.email]),
+        customerType: new FormControl(customer.customerType, [Validators.required]),
+      });
     });
   }
 
   ngOnInit(): void {
-    this.customerForm = new FormGroup({
-      customerCode: new FormControl(this.confirmCustomer.customerCode, [Validators.required, Validators.pattern('^KH-\\d{4}$')]),
-      customerName: new FormControl(this.confirmCustomer.customerName, [Validators.required]),
-      dateOfBirth: new FormControl(this.confirmCustomer.dateOfBirth, [Validators.required, Validators.pattern('^\\d{4}-\\d{2}-\\d{2}$')]),
-      gender: new FormControl(this.confirmCustomer.gender, [Validators.required]),
-      idCard: new FormControl(this.confirmCustomer.idCard, [Validators.required, Validators.pattern('^\\d{9}$')]),
-      phone: new FormControl(this.confirmCustomer.phone, [Validators.required, Validators.pattern('^(091|090|\\(\\+84\\)90|\\(\\+84\\)91)\\d{7}$')]),
-      address: new FormControl(this.confirmCustomer.address, [Validators.required]),
-      email: new FormControl(this.confirmCustomer.email, [Validators.required, Validators.email]),
-      customerType: new FormControl(this.confirmCustomer.customerType, [Validators.required]),
-    });
+  }
+  updateCustomer(customerId: number) {
+    if (this.customerForm.valid) {
+      this.customerService.updateCustomer(customerId, this.customerForm.value);
+      this.router.navigate(['/customer/customer-list']);
+    }
   }
 
-  editCustomer() {
+  compareFn(t1, t2): boolean {
+    return t1 && t2 ? t1.id === t2.id : t1 === t2;
   }
-
 }

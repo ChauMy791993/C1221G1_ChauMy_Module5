@@ -24,7 +24,8 @@
       <div class="col-lg-6">
         <div class="row g-3">
           <div class="col-6 text-end">
-            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="../../../assets/img/about-1.jpg" style="margin-top: 25%;">
+            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="../../../assets/img/about-1.jpg"
+                 style="margin-top: 25%;">
           </div>
           <div class="col-6 text-start">
             <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="../../../assets/img/about-2.jpg">
@@ -41,24 +42,47 @@
         <div class="wow fadeInUp" data-wow-delay="0.2s">
           <form [formGroup]="facilityForm" (ngSubmit)="createFacility()">
             <div class="row g-3">
+              <div class="col-12">
+                <div class="form-floating">
+                  <select class="form-select" formControlName="facilityType" id="select1">
+                    <option [ngValue]="null">--select--</option>
+                    <option [ngValue]="id" *ngFor="let id of facilityTypes">{{id.facilityTypeName}}</option>
+                  </select>
+                  <label for="select1">Select Facility type</label>
+                </div>
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.facilityType.hasError('required')&& facilityForm.controls.facilityType.touched">
+                  Not Null
+                </p>
+              </div>
+
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" formControlName="facilityCode" class="form-control" id="code" placeholder="Facility code">
+                  <input type="text" formControlName="facilityCode" class="form-control" id="code"
+                         placeholder="Facility code">
                   <label for="code">Facility code</label>
                 </div>
-                <p style="color: red" *ngIf="facilityForm.controls.facilityCode.hasError('required')&& facilityForm.controls.facilityCode.touched">
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.facilityCode.hasError('required')&& facilityForm.controls.facilityCode.touched">
                   Not Null
+                </p>
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.facilityCode.hasError('pattern')&& facilityForm.controls.facilityCode.touched">
+                  Format: DV-XXXX
                 </p>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" formControlName="facilityName" class="form-control" id="name" placeholder="Facility Name">
+                  <input type="text" formControlName="facilityName" class="form-control" id="name"
+                         placeholder="Facility Name">
                   <label for="name">Facility Name</label>
                 </div>
-                <p style="color: red" *ngIf="facilityForm.controls.facilityName.hasError('required')&& facilityForm.controls.facilityName.touched">
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.facilityName.hasError('required')&& facilityForm.controls.facilityName.touched">
                   Not Null
                 </p>
-                <p style="color: red" *ngIf="facilityForm.controls.facilityName.hasError('pattern')&& facilityForm.controls.facilityName.touched">
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.facilityName.hasError('pattern')&& facilityForm.controls.facilityName.touched">
                   Format: name does not contain numbers
                 </p>
               </div>
@@ -67,7 +91,8 @@
                   <input type="text" formControlName="facilityArea" class="form-control" id="area" placeholder="Area">
                   <label for="area">Area</label>
                 </div>
-                <p style="color: red" *ngIf="facilityForm.controls.facilityArea.hasError('required')&& facilityForm.controls.facilityArea.touched">
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.facilityArea.hasError('required')&& facilityForm.controls.facilityArea.touched">
                   Not Null
                 </p>
               </div>
@@ -76,31 +101,37 @@
                   <input type="text" formControlName="facilityCost" class="form-control" id="cost" placeholder="Cost">
                   <label for="cost">Cost</label>
                 </div>
-                <p style="color: red" *ngIf="facilityForm.controls.facilityCost.hasError('required')&& facilityForm.controls.facilityCost.touched">
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.facilityCost.hasError('required')&& facilityForm.controls.facilityCost.touched">
                   Not Null
                 </p>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" formControlName="facilityMaxPeople" class="form-control" id="people" placeholder="people">
+                  <input type="text" formControlName="facilityMaxPeople" class="form-control" id="people"
+                         placeholder="people">
                   <label for="people">Max People</label>
                 </div>
-                <p style="color: red" *ngIf="facilityForm.controls.facilityMaxPeople.hasError('required')&& facilityForm.controls.facilityMaxPeople.touched">
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.facilityMaxPeople.hasError('required')&& facilityForm.controls.facilityMaxPeople.touched">
                   Not Null
                 </p>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" formControlName="standardRoom" class="form-control" id="room" placeholder="Standard Room">
+                  <input type="text" formControlName="standardRoom" class="form-control" id="room"
+                         placeholder="Standard Room">
                   <label for="room">Standard Room</label>
                 </div>
-                <p style="color: red" *ngIf="facilityForm.controls.standardRoom.hasError('required')&& facilityForm.controls.standardRoom.touched">
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.standardRoom.hasError('required')&& facilityForm.controls.standardRoom.touched">
                   Not Null
                 </p>
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" formControlName="descriptionOtherConvenience" class="form-control" id="description" placeholder="Description">
+                  <input type="text" formControlName="descriptionOtherConvenience" class="form-control" id="description"
+                         placeholder="Description">
                   <label for="description">Description</label>
                 </div>
               </div>
@@ -109,32 +140,24 @@
                   <input type="text" formControlName="poolArea" class="form-control" id="pool" placeholder="Pool Area">
                   <label for="pool">Pool Area</label>
                 </div>
-                <p style="color: red" *ngIf="facilityForm.controls.poolArea.hasError('pattern')&& facilityForm.controls.poolArea.touched">
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.poolArea.hasError('pattern')&& facilityForm.controls.poolArea.touched">
                   Format: positive numbers
                 </p>
               </div>
-              <div class="col-12">
+              <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" formControlName="numberOfFloors" class="form-control" id="floors" placeholder="Number Of Floors">
+                  <input type="text" formControlName="numberOfFloors" class="form-control" id="floors"
+                         placeholder="Number Of Floors">
                   <label for="floors">Number Of Floors</label>
                 </div>
-                <p style="color: red" *ngIf="facilityForm.controls.facilityName.hasError('pattern')&& facilityForm.controls.facilityName.touched">
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.facilityName.hasError('pattern')&& facilityForm.controls.facilityName.touched">
                   Format: positive numbers
                 </p>
               </div>
 
-              <div class="col-md-6">
-                <div class="form-floating">
-                  <select class="form-select" formControlName="facilityType" id="select1">
-                    <option [ngValue]="null">--select--</option>
-                    <option [ngValue]="id" *ngFor="let id of facilityTypes">{{id.facilityTypeName}}</option>
-                  </select>
-                  <label for="select1">Select Facility type</label>
-                </div>
-                <p style="color: red" *ngIf="facilityForm.controls.facilityType.hasError('required')&& facilityForm.controls.facilityType.touched">
-                  Not Null
-                </p>
-              </div>
+
               <div class="col-md-6">
                 <div class="form-floating">
                   <select class="form-select" formControlName="rentType" id="select2">
@@ -143,7 +166,8 @@
                   </select>
                   <label for="select2">Select Rent type</label>
                 </div>
-                <p style="color: red" *ngIf="facilityForm.controls.rentType.hasError('required')&& facilityForm.controls.rentType.touched">
+                <p style="color: red"
+                   *ngIf="facilityForm.controls.rentType.hasError('required')&& facilityForm.controls.rentType.touched">
                   Not Null
                 </p>
               </div>
