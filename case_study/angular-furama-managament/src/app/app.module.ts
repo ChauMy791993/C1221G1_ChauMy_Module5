@@ -15,18 +15,9 @@ import {HomeComponent} from './home/home.component';
 import {RouterModule, Routes} from '@angular/router';
 import { ContractCreateComponent } from './contract-create/contract-create.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AppRoutingModule} from './app-routing.module';
 
-const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'contract', component: ContractComponent},
-  {path: 'contract/create', component: ContractCreateComponent},
-  {path: 'customer' , component: CustomerComponent},
-  {path: 'customer/create' , component: CustomerCreateComponent},
-  {path: 'customer/edit/:customerId', component: CustomerEditComponent},
-  {path: 'facility' , component: FacilityComponent},
-  {path: 'facility/create' , component: FacilityCreateComponent},
-  {path: 'facility/edit/:facilityId' , component: FacilityEditComponent},
-];
+
 
 @NgModule({
   declarations: [
@@ -45,9 +36,9 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

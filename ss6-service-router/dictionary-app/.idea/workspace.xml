@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f2f3c84-24d7-4548-8b78-7a0351e23e83" name="Changes" comment="" />
+    <list default="true" id="8f2f3c84-24d7-4548-8b78-7a0351e23e83" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/customer-create/customer-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/customer-create/customer-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/customer-edit/customer-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/customer-edit/customer-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/customer/customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/customer/customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/customer/customer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/data/contract.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/data/contract.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/data/customer-type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/data/customer-type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/data/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/data/customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/data/facility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/data/facility.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/module/contract.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/model/contract.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/module/customer-type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/model/customer-type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/module/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/model/customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/module/facility-type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/model/facility-type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/module/facility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/model/facility.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/module/rent-type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/model/rent-type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/service/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/angular-furama-managament/src/app/service/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +91,8 @@
       <updated>1655193336582</updated>
       <workItem from="1655193337623" duration="5350000" />
       <workItem from="1655216042062" duration="2076000" />
+      <workItem from="1655221793801" duration="8000" />
+      <workItem from="1655221813106" duration="2000" />
     </task>
     <servers />
   </component>

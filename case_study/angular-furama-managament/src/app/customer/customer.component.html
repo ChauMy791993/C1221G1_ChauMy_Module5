@@ -54,11 +54,11 @@
           <td>{{customer.customerType.customerTypeName}}</td>
           <td>
             <a type="button" class="btn btn-info mb-2 w-80 text-white"
-               href="customer-edit.html">Detail</a>
+               >Detail</a>
           </td>
           <td>
             <a type="button" class="btn btn-warning mb-2 w-100 text-white"
-               href="customer-edit.html">Edit</a>
+               [routerLink]="['/customer/edit',customer.customerId]">Edit</a>
           </td>
           <td>
             <a type="button" class="btn btn-danger rounded mb-2 w-80" data-bs-toggle="modal"

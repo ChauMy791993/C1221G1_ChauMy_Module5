@@ -1,4 +1,4 @@
-import {CustomerType} from '../module/customer-type';
+import {CustomerType} from '../model/customer-type';
 
 export const customerTypes: CustomerType[] = [
   {

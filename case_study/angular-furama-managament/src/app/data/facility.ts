@@ -1,6 +1,6 @@
-import {Facility} from '../module/facility';
-import {FacilityType} from '../module/facility-type';
-import {RentType} from '../module/rent-type';
+import {Facility} from '../model/facility';
+import {FacilityType} from '../model/facility-type';
+import {RentType} from '../model/rent-type';
 
 export const facilities: Facility[] = [{
   facilityId: 1,
@@ -60,7 +60,7 @@ export const facilities: Facility[] = [{
     },
     rentType: {
       id: 1,
-      rentTypeName: 'Year'
+      rentTypeName: 'year'
     },
   },
   {

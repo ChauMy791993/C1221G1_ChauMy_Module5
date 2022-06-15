@@ -1,4 +1,4 @@
-import {Customer} from '../module/customer';
+import {Customer} from '../model/customer';
 
 export const customers: Customer [] = [
   {
