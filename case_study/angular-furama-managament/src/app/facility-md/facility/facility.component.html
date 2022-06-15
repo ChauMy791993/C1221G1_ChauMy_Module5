@@ -1,0 +1,105 @@
+<!-- Page Header Start -->
+<div class="container-fluid page-header mb-5 p-0" style="background-image: url(../../../assets/img/carousel-1.jpg);">
+  <div class="container-fluid page-header-inner py-5">
+    <div class="container text-center pb-5">
+      <h1 class="display-3 text-white mb-3 animated slideInDown">Facility</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center text-uppercase">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Facility</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Room Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h6 class="section-title text-center text-primary text-uppercase">Our Facility</h6>
+      <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Facility</span></h1>
+      <button class="custom-btn btn-12 mb-3 "><span [routerLink]="['/facility/create']">Click!</span><span>Add New</span></button>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-sm-4" *ngFor="let facility of facilities">
+        <div class="wow fadeInUp" data-wow-delay="0.1s">
+          <div class="room-item shadow rounded overflow-hidden">
+            <div class="position-relative">
+              <img class="img-fluid" src="{{facility.facilityImage}}" alt="">
+              <small
+                class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
+                {{facility.facilityCost}}$</small>
+            </div>
+            <div class="p-4 mt-2">
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0">{{facility.facilityName}}</h5>
+                <div class="ps-2">
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                </div>
+              </div>
+              <div class="d-flex mb-3">
+                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>Bed</small>
+                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>Bath</small>
+                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+              </div>
+              <div class="d-flex mb-1">
+                <p class="border-end me-1 pe-1">Area: {{facility.facilityArea}}</p>
+                <p class="border-end me-1 pe-1">Max People: {{facility.facilityMaxPeople}}</p>
+                <p class="border-end me-1 pe-1">Standard: {{facility.standardRoom}}</p>
+              </div>
+              <div class="d-flex mb-3">
+                <p class="border-end me-1 pe-1">Facility Type: {{facility.facilityType.facilityTypeName}}</p>
+                <p class="border-end me-1 pe-1">Rent Type: {{facility.rentType.rentTypeName}}</p>
+              </div>
+              <div class="d-flex mb-3" *ngIf="facility.facilityType.id == 2">
+                <p class="border-end me-1 pe-1">Floors: {{facility.numberOfFloors}}</p>
+              </div>
+              <div class="d-flex mb-3" *ngIf="facility.facilityType.id == 1">
+                <p class="border-end me-1 pe-1">Floors: {{facility.numberOfFloors}}</p>
+                <p class="border-end me-1 pe-1">Pool Area: {{facility.poolArea}}</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Update</a>
+                <a type="button" class="btn btn-danger rounded py-2 px-4" data-bs-toggle="modal"
+                   data-bs-target="#exampleModal">
+                  Delete
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Room End -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete !</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

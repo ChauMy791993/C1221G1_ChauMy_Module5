@@ -1,0 +1,96 @@
+<!-- Page Header Start -->
+<div class="container-fluid page-header mb-5 p-0" style="background-image: url(../../../assets/img/carousel-1.jpg);">
+  <div class="container-fluid page-header-inner py-5">
+    <div class="container text-center pb-5">
+      <h1 class="display-3 text-white mb-3 animated slideInDown">Contact</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center text-uppercase">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page">Contract</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- Contact Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h6 class="section-title text-center text-primary text-uppercase">Contract Us</h6>
+      <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
+              <a class="btn btn-primary mb-3" style="background-color: #55acee;" [routerLink]="['/contract/create']"
+                 role="button">
+                Add New Contract
+              </a>
+    </div>
+
+
+<!--    <nav class="navbar navbar-light bg-white mb-3">-->
+<!--      <div class="container-fluid">-->
+<!--        <a class="btn btn-primary" style="background-color: #55acee;" href="customer-create.html"-->
+<!--           role="button">-->
+<!--          Add New Customer-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </nav>-->
+    <div>
+      <table class="table table-striped mx-auto wow fadeInLeft " data-wow-delay="0.6s">
+        <thead>
+        <tr class="table-warning">
+          <th>#</th>
+          <th>Start date</th>
+          <th>End date</th>
+          <th>Deposit</th>
+          <th>Customer</th>
+          <th>Phone</th>
+          <th>Facility</th>
+          <th class="text-center" colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let contract of contracts,index as index">
+          <td>{{index + 1}}</td>
+          <td>{{contract.startDate | date: "dd/MM/yyyy"}}</td>
+          <td>{{contract.endDate | date: "dd/MM/yyyy"}}</td>
+          <td>{{contract.deposit | currency: "$"}}</td>
+          <td>{{contract.customer.customerName}}</td>
+          <td>{{contract.customer.phone}}</td>
+          <td>{{contract.facility.facilityName}}</td>
+          <td>
+            <a type="button" class="btn btn-warning mb-2 w-100 text-white"
+               href="customer-edit.html">Edit</a>
+          </td>
+          <td>
+            <a type="button" class="btn btn-danger rounded mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Delete
+            </a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- List End -->
+  </div>
+</div>
+<!-- Contact End -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete !</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

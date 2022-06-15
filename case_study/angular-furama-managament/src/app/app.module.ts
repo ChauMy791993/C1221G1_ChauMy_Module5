@@ -4,18 +4,19 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {FooterComponent} from './footer/footer.component';
 import {HeaderComponent} from './header/header.component';
-import {FacilityComponent} from './facility/facility.component';
-import {FacilityCreateComponent} from './facility-create/facility-create.component';
-import {FacilityEditComponent} from './facility-edit/facility-edit.component';
-import {CustomerComponent} from './customer/customer.component';
-import {CustomerCreateComponent} from './customer-create/customer-create.component';
-import {CustomerEditComponent} from './customer-edit/customer-edit.component';
-import {ContractComponent} from './contract/contract.component';
+import {FacilityComponent} from './facility-md/facility/facility.component';
+import {FacilityCreateComponent} from './facility-md/facility-create/facility-create.component';
+import {FacilityEditComponent} from './facility-md/facility-edit/facility-edit.component';
+import {CustomerCreateComponent} from './customer/customer-create/customer-create.component';
+import {CustomerEditComponent} from './customer/customer-edit/customer-edit.component';
+import {ContractComponent} from './contract-md/contract/contract.component';
 import {HomeComponent} from './home/home.component';
 import {RouterModule, Routes} from '@angular/router';
-import { ContractCreateComponent } from './contract-create/contract-create.component';
+import { ContractCreateComponent } from './contract-md/contract-create/contract-create.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {CustomerListComponent } from './customer/customer-list/customer-list.component';
 
 
 
@@ -27,19 +28,20 @@ import {AppRoutingModule} from './app-routing.module';
     FacilityComponent,
     FacilityCreateComponent,
     FacilityEditComponent,
-    CustomerComponent,
+    CustomerListComponent,
     CustomerCreateComponent,
     CustomerEditComponent,
     ContractComponent,
     HomeComponent,
-    ContractCreateComponent
+    ContractCreateComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        NgxPaginationModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
