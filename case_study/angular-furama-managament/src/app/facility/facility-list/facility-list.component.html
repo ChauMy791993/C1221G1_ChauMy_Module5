@@ -31,7 +31,9 @@
         <div class="wow fadeInUp" data-wow-delay="0.1s">
           <div class="room-item shadow rounded overflow-hidden">
             <div class="position-relative">
-              <img class="img-fluid" src="{{facility.facilityImage}}" alt="">
+              <img class="img-fluid" *ngIf="facility.facilityImage == 1" src="assets/img/villa-1.jpeg" alt="">
+              <img class="img-fluid" *ngIf="facility.facilityImage == 2" src="assets/img/garden-deluxe.jpeg" alt="">
+              <img class="img-fluid" *ngIf="facility.facilityImage == 3" src="assets/img/ocean-suite.jpeg" alt="">
               <small
                 class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
                 {{facility.facilityCost}}$</small>

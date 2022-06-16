@@ -27,6 +27,7 @@ export class FacilityCreateComponent implements OnInit {
     this.facilityForm = new FormGroup({
       facilityCode: new FormControl('', [Validators.required, Validators.pattern('^DV-\\d{4}$')]),
       facilityName: new FormControl('', [Validators.required, Validators.pattern('^[A-Za-z ]+$')]),
+      facilityImage: new FormControl('', [Validators.required]),
       facilityArea: new FormControl('', [Validators.required]),
       facilityCost: new FormControl('', [Validators.required]),
       facilityMaxPeople: new FormControl('', [Validators.required]),

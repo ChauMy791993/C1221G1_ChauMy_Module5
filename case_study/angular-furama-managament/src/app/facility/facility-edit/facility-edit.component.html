@@ -42,7 +42,7 @@
         <div class="wow fadeInUp" data-wow-delay="0.2s">
           <form [formGroup]="facilityForm" (ngSubmit)="updateFacility(facilityId)">
             <div class="row g-3">
-              <div class="col-12">
+              <div class="col-md-6">
                 <div class="form-floating">
                   <select class="form-select" formControlName="facilityType" [compareWith]="compareFn" id="select1">
                     <option [ngValue]="null">--select--</option>
@@ -51,11 +51,26 @@
                   <label for="select1">Select Facility type</label>
                 </div>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.facilityType.hasError('required')&& facilityForm.controls.facilityType.touched">
+                   *ngIf="facilityForm.controls.facilityType.hasError('required')&& (facilityForm.controls.facilityType.touched|| submit)">
                   Not Null
                 </p>
               </div>
 
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select class="form-select" formControlName="facilityImage" id="select4">
+                    <option value="">--select--</option>
+                    <option value="1">Villa Image</option>
+                    <option value="2">House Image</option>
+                    <option value="3">Room Image</option>
+                  </select>
+                  <label for="select4">Facility Image</label>
+                  <p style="color: red"
+                     *ngIf="facilityForm.controls.facilityImage.hasError('required')&& (facilityForm.controls.facilityImage.touched|| submit)">
+                    Not Null
+                  </p>
+                </div>
+              </div>
               <div class="col-md-6">
                 <div class="form-floating">
                   <input type="text" formControlName="facilityCode" class="form-control" id="code"
@@ -63,11 +78,11 @@
                   <label for="code">Facility code</label>
                 </div>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.facilityCode.hasError('required')&& facilityForm.controls.facilityCode.touched">
+                   *ngIf="facilityForm.controls.facilityCode.hasError('required')&& (facilityForm.controls.facilityCode.touched|| submit)">
                   Not Null
                 </p>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.facilityCode.hasError('pattern')&& facilityForm.controls.facilityCode.touched">
+                   *ngIf="facilityForm.controls.facilityCode.hasError('pattern')&& (facilityForm.controls.facilityCode.touched|| submit)">
                   Format: DV-XXXX
                 </p>
               </div>
@@ -78,11 +93,11 @@
                   <label for="name">Facility Name</label>
                 </div>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.facilityName.hasError('required')&& facilityForm.controls.facilityName.touched">
+                   *ngIf="facilityForm.controls.facilityName.hasError('required')&& (facilityForm.controls.facilityName.touched|| submit)">
                   Not Null
                 </p>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.facilityName.hasError('pattern')&& facilityForm.controls.facilityName.touched">
+                   *ngIf="facilityForm.controls.facilityName.hasError('pattern')&& (facilityForm.controls.facilityName.touched|| submit)">
                   Format: name does not contain numbers
                 </p>
               </div>
@@ -92,7 +107,7 @@
                   <label for="area">Area</label>
                 </div>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.facilityArea.hasError('required')&& facilityForm.controls.facilityArea.touched">
+                   *ngIf="facilityForm.controls.facilityArea.hasError('required')&& (facilityForm.controls.facilityArea.touched|| submit)">
                   Not Null
                 </p>
               </div>
@@ -102,7 +117,7 @@
                   <label for="cost">Cost</label>
                 </div>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.facilityCost.hasError('required')&& facilityForm.controls.facilityCost.touched">
+                   *ngIf="facilityForm.controls.facilityCost.hasError('required')&& (facilityForm.controls.facilityCost.touched|| submit)">
                   Not Null
                 </p>
               </div>
@@ -113,7 +128,7 @@
                   <label for="people">Max People</label>
                 </div>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.facilityMaxPeople.hasError('required')&& facilityForm.controls.facilityMaxPeople.touched">
+                   *ngIf="facilityForm.controls.facilityMaxPeople.hasError('required')&& (facilityForm.controls.facilityMaxPeople.touched|| submit)">
                   Not Null
                 </p>
               </div>
@@ -124,7 +139,7 @@
                   <label for="room">Standard Room</label>
                 </div>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.standardRoom.hasError('required')&& facilityForm.controls.standardRoom.touched">
+                   *ngIf="facilityForm.controls.standardRoom.hasError('required')&& (facilityForm.controls.standardRoom.touched || submit)">
                   Not Null
                 </p>
               </div>
@@ -141,7 +156,7 @@
                   <label for="pool">Pool Area</label>
                 </div>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.poolArea.hasError('pattern')&& facilityForm.controls.poolArea.touched">
+                   *ngIf="facilityForm.controls.poolArea.hasError('pattern')&& (facilityForm.controls.poolArea.touched|| submit)">
                   Format: positive numbers
                 </p>
               </div>
@@ -152,7 +167,7 @@
                   <label for="floors">Number Of Floors</label>
                 </div>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.facilityName.hasError('pattern')&& facilityForm.controls.facilityName.touched">
+                   *ngIf="facilityForm.controls.facilityName.hasError('pattern')&& (facilityForm.controls.facilityName.touched|| submit)">
                   Format: positive numbers
                 </p>
               </div>
@@ -167,7 +182,7 @@
                   <label for="select2">Select Rent type</label>
                 </div>
                 <p style="color: red"
-                   *ngIf="facilityForm.controls.rentType.hasError('required')&& facilityForm.controls.rentType.touched">
+                   *ngIf="facilityForm.controls.rentType.hasError('required')&& (facilityForm.controls.rentType.touched|| submit)">
                   Not Null
                 </p>
               </div>

@@ -5,6 +5,7 @@ export interface Contract {
   id: number;
   customer?: Customer;
   facility?: Facility;
+  totalMoney?: number;
   startDate: string;
   endDate: string;
   deposit: number;

@@ -47,10 +47,10 @@
                   <input type="text" formControlName="customerCode" class="form-control" id="code" placeholder="Customer code">
                   <label for="code">Customer code</label>
                 </div>
-                <p style="color: red" *ngIf="customerForm.controls.customerCode.hasError('required')&& customerForm.controls.customerCode.touched">
+                <p style="color: red" *ngIf="customerForm.controls.customerCode.hasError('required')&& (customerForm.controls.customerCode.touched|| submit)">
                   Not Null
                 </p>
-                <p style="color: red" *ngIf="customerForm.controls.customerCode.hasError('pattern')&& customerForm.controls.customerCode.touched">
+                <p style="color: red" *ngIf="customerForm.controls.customerCode.hasError('pattern')&& (customerForm.controls.customerCode.touched|| submit)">
                   Format : KH-XXXX
                 </p>
               </div>
@@ -58,7 +58,7 @@
                 <div class="form-floating">
                   <input type="text" formControlName="customerName" class="form-control" id="name" placeholder="Customer Name">
                   <label for="name">Customer Name</label>
-                  <p style="color: red" *ngIf="customerForm.controls.customerName.hasError('required')&& customerForm.controls.customerName.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.customerName.hasError('required')&& (customerForm.controls.customerName.touched || submit)">
                     Not Null
                   </p>
                 </div>
@@ -67,10 +67,10 @@
                 <div class="form-floating">
                   <input type="date" formControlName="dateOfBirth" class="form-control" id="birthday" placeholder="Birthday">
                   <label for="birthday">Birthday</label>
-                  <p style="color: red" *ngIf="customerForm.controls.dateOfBirth.hasError('required')&& customerForm.controls.dateOfBirth.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.dateOfBirth.hasError('required')&& (customerForm.controls.dateOfBirth.touched || submit)">
                     Not Null
                   </p>
-                  <p style="color: red" *ngIf="customerForm.controls.dateOfBirth.hasError('pattern')&& customerForm.controls.dateOfBirth.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.dateOfBirth.hasError('pattern')&& (customerForm.controls.dateOfBirth.touched || submit)">
                     Format : DD/MM/YYYY
                   </p>
                 </div>
@@ -84,7 +84,7 @@
                     <option value="1">Nam</option>
                   </select>
                   <label for="select4">Gender</label>
-                  <p style="color: red" *ngIf="customerForm.controls.gender.hasError('required')&& customerForm.controls.gender.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.gender.hasError('required')&& (customerForm.controls.gender.touched || submit)">
                     Not Null
                   </p>
                 </div>
@@ -93,10 +93,10 @@
                 <div class="form-floating">
                   <input type="text" formControlName="idCard" class="form-control" id="card" placeholder="Id_Card">
                   <label for="card">Id_Card</label>
-                  <p style="color: red" *ngIf="customerForm.controls.idCard.hasError('required')&& customerForm.controls.idCard.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.idCard.hasError('required')&& (customerForm.controls.idCard.touched || submit)">
                     Not Null
                   </p>
-                  <p style="color: red" *ngIf="customerForm.controls.idCard.hasError('pattern')&& customerForm.controls.idCard.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.idCard.hasError('pattern')&& (customerForm.controls.idCard.touched || submit)">
                     Format: XXXXXXXXX or XXXXXXXXXXXX (X is number 0-9)
                   </p>
                 </div>
@@ -105,10 +105,10 @@
                 <div class="form-floating">
                   <input type="text" formControlName="phone" class="form-control" id="phone" placeholder="Phone">
                   <label for="phone">Phone</label>
-                  <p style="color: red" *ngIf="customerForm.controls.phone.hasError('required')&& customerForm.controls.phone.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.phone.hasError('required')&& (customerForm.controls.phone.touched || submit)">
                     Not Null
                   </p>
-                  <p style="color: red" *ngIf="customerForm.controls.phone.hasError('pattern')&& customerForm.controls.phone.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.phone.hasError('pattern')&& (customerForm.controls.phone.touched || submit)">
                     Format: 090xxxxxxx or 091xxxxxxx or (84)+90xxxxxxx or (84)+91xxxxxxx
                   </p>
                 </div>
@@ -117,10 +117,10 @@
                 <div class="form-floating">
                   <input type="text" formControlName="email" class="form-control" id="email" placeholder="Email">
                   <label for="email">Email</label>
-                  <p style="color: red" *ngIf="customerForm.controls.email.hasError('required')&& customerForm.controls.email.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.email.hasError('required')&& (customerForm.controls.email.touched || submit)">
                     Not Null
                   </p>
-                  <p style="color: red" *ngIf="customerForm.controls.email.hasError('email')&& customerForm.controls.email.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.email.hasError('email')&& (customerForm.controls.email.touched || submit)">
                     Email invalidate
                   </p>
                 </div>
@@ -132,7 +132,7 @@
                     <option [ngValue]="id" *ngFor="let id of customerTypes">{{id.customerTypeName}}</option>
                   </select>
                   <label for="select1">Customer_Type</label>
-                  <p style="color: red" *ngIf="customerForm.controls.customerType.hasError('required')&& customerForm.controls.customerType.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.customerType.hasError('required')&& (customerForm.controls.customerType.touched || submit)">
                     Not Null
                   </p>
                 </div>
@@ -142,7 +142,7 @@
                 <div class="form-floating">
                   <input type="text" formControlName="address" class="form-control" id="address" placeholder="Address">
                   <label for="address">Address</label>
-                  <p style="color: red" *ngIf="customerForm.controls.address.hasError('required')&& customerForm.controls.address.touched">
+                  <p style="color: red" *ngIf="customerForm.controls.address.hasError('required')&& (customerForm.controls.address.touched || submit)">
                     Not Null
                   </p>
                 </div>

@@ -5,14 +5,16 @@ import {Customer} from '../customer/model/customer';
 @Injectable({
   providedIn: 'root'
 })
-
+// 1:'assets/img/villa-1.jpeg'
+// 2:'assets/img/garden-deluxe.jpeg'
+// 3:'assets/img/ocean-suite.jpeg'
 export class FacilityService {
   private facilities: Facility[] = [
     {
       facilityId: 1,
       facilityCode: 'DV-111',
       facilityName: 'Room suite',
-      facilityImage: 'assets/img/ocean-suite.jpeg',
+      facilityImage: 3,
       facilityArea: 5000,
       facilityCost: 1000,
       facilityMaxPeople: 2,
@@ -31,7 +33,7 @@ export class FacilityService {
       facilityId: 2,
       facilityCode: 'DV-2222',
       facilityName: 'Villa Beach Front',
-      facilityImage: 'assets/img/villa-1.jpeg',
+      facilityImage: 1,
       facilityArea: 25000,
       facilityCost: 2500,
       facilityMaxPeople: 10,
@@ -52,7 +54,7 @@ export class FacilityService {
       facilityId: 3,
       facilityCode: 'DV-3333',
       facilityName: 'Villa Beach Front',
-      facilityImage: 'assets/img/villa-2.jpeg',
+      facilityImage: 1,
       facilityArea: 25000,
       facilityCost: 3000,
       facilityMaxPeople: 10,
@@ -73,7 +75,7 @@ export class FacilityService {
       facilityId: 4,
       facilityCode: 'DV-4444',
       facilityName: 'House Princess',
-      facilityImage: 'assets/img/garden-deluxe.jpeg',
+      facilityImage: 2,
       facilityArea: 14000,
       facilityCost: 2000,
       facilityMaxPeople: 7,

@@ -47,61 +47,69 @@
 
       <div class="col-lg-6">
         <div class="wow fadeInUp" data-wow-delay="0.2s">
-          <form>
+          <form [formGroup]="contractForm" (ngSubmit)="createContract()">
             <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="date" class="form-control" id="start" placeholder="Start date">
+                  <input type="date" formControlName="startDate" class="form-control" id="start" placeholder="Start date">
                   <label for="start">Start date</label>
                 </div>
+                <p style="color: red" *ngIf="contractForm.controls.startDate.hasError('required')&& contractForm.controls.startDate.touched">
+                  Not Null
+                </p>
+                <p style="color: red" *ngIf="contractForm.controls.startDate.hasError('pattern')&& contractForm.controls.startDate.touched">
+                  Format: DD/MM/YYYY
+                </p>
+
               </div>
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="date" class="form-control" id="end" placeholder="End date">
+                  <input type="date" formControlName="endDate" class="form-control" id="end" placeholder="End date">
                   <label for="end">End date</label>
                 </div>
+                <p style="color: red" *ngIf="contractForm.controls.endDate.hasError('required')&& contractForm.controls.endDate.touched">
+                  Not Null
+                </p>
+                <p style="color: red" *ngIf="contractForm.controls.endDate.hasError('pattern')&& contractForm.controls.endDate.touched">
+                  Format: DD/MM/YYYY
+                </p>
               </div>
-              <div class="col-md-6">
+              <div class="col-12">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="deposit" placeholder="Deposit">
+                  <input type="text" formControlName="deposit" class="form-control" id="deposit" placeholder="Deposit">
                   <label for="deposit">Deposit</label>
                 </div>
+                <p style="color: red" *ngIf="contractForm.controls.deposit.hasError('required')&& contractForm.controls.deposit.touched">
+                  Not Null
+                </p>
+                <p style="color: red" *ngIf="contractForm.controls.deposit.hasError('pattern')&& contractForm.controls.deposit.touched">
+                  Format: positive numbers
+                </p>
               </div>
+
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="money" placeholder="Total Money">
-                  <label for="money">Total Money</label>
+                  <select class="form-select" formControlName="customer" id="select1">
+                    <option [ngValue]="null">--select--</option>
+                    <option [ngValue]="id" *ngFor="let id of customers">{{id.customerName}}</option>
+                  </select>
+                  <label for="select1">Customer</label>
+                  <p style="color: red" *ngIf="contractForm.controls.customer.hasError('required')&& contractForm.controls.customer.touched">
+                    Not Null
+                  </p>
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="form-floating">
-                  <select class="form-select" id="customer">
-                    <option value="0">--select--</option>
-                    <option value="1">Tran Van A</option>
-                    <option value="2">Tran Van B</option>
+                  <select class="form-select" formControlName="facility" id="select2">
+                    <option [ngValue]="null">--select--</option>
+                    <option [ngValue]="id" *ngFor="let id of facilities">{{id.facilityName}}</option>
                   </select>
-                  <label for="customer">Customer</label>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-floating">
-                  <select class="form-select" id="employee">
-                    <option value="0">--select--</option>
-                    <option value="1">Tran Van C</option>
-                    <option value="2">Tran Van D</option>
-                  </select>
-                  <label for="employee">Employee</label>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-floating">
-                  <select class="form-select" id="facility">
-                    <option value="0">--select--</option>
-                    <option value="1">Villa Beach Front</option>
-                    <option value="2">House Princess 01</option>
-                  </select>
-                  <label for="facility">Facility</label>
+                  <label for="select2">Facility</label>
+                  <p style="color: red" *ngIf="contractForm.controls.facility.hasError('required')&& contractForm.controls.facility.touched">
+                    Not Null
+                  </p>
                 </div>
               </div>
 

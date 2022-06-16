@@ -5,7 +5,7 @@ export interface Facility {
   facilityId: number;
   facilityCode?: string;
   facilityName: string;
-  facilityImage?: string;
+  facilityImage?: number;
   facilityArea?: number;
   facilityCost?: number;
   facilityMaxPeople?: number;

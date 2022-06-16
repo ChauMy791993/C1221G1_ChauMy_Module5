@@ -15,6 +15,7 @@ export class CustomerEditComponent implements OnInit {
   customerForm: FormGroup;
   customerTypes: CustomerType[] = [];
   customerId: number;
+  submit = false;
 
   constructor(private customerService: CustomerService, private customerTypeService: CustomerTypeService,
               private activatedRoute: ActivatedRoute, private router: Router) {
@@ -38,8 +39,11 @@ export class CustomerEditComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   updateCustomer(customerId: number) {
+    this.submit = true;
     if (this.customerForm.valid) {
+      this.submit = false;
       this.customerService.updateCustomer(customerId, this.customerForm.value);
       this.router.navigate(['/customer/customer-list']);
     }

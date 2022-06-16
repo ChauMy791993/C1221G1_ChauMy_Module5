@@ -18,6 +18,7 @@ export class FacilityEditComponent implements OnInit {
   facilityTypes: FacilityType[] = [];
   rentTypes: RentType[] = [];
   facilityId: number;
+  submit = false;
 
   constructor(private facilityService: FacilityService, private facilityTypeService: FacilityTypeService,
               private rentTypeService: RentTypeService, private activatedRouter: ActivatedRoute, private route: Router) {
@@ -29,6 +30,7 @@ export class FacilityEditComponent implements OnInit {
       this.facilityForm = new FormGroup({
         facilityCode: new FormControl(facility.facilityCode, [Validators.required, Validators.pattern('^DV-\\d{4}$')]),
         facilityName: new FormControl(facility.facilityName, [Validators.required, Validators.pattern('^[A-Za-z ]+$')]),
+        facilityImage: new FormControl(facility.facilityImage, [Validators.required]),
         facilityArea: new FormControl(facility.facilityArea, [Validators.required]),
         facilityCost: new FormControl(facility.facilityCost, [Validators.required]),
         facilityMaxPeople: new FormControl(facility.facilityMaxPeople, [Validators.required]),
@@ -45,7 +47,9 @@ export class FacilityEditComponent implements OnInit {
   ngOnInit(): void {
   }
   updateFacility(facilityId: number) {
+    this.submit = true;
     if (this.facilityForm.valid) {
+      this.submit = false;
       this.facilityService.updateFacility(facilityId, this.facilityForm.value);
       this.route.navigate(['/facility/facility-list']);
     }
