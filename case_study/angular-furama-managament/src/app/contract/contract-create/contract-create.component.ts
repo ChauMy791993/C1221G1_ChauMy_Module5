@@ -22,8 +22,8 @@ export class ContractCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.customers = this.customerService.getListCustomer();
-    this.facilities = this.facilityService.getListFacility();
+    this.getCustomerList();
+    this.getFacilityList();
     this.contractForm = new FormGroup({
       startDate: new FormControl('', [Validators.required, Validators.pattern('^\\d{4}\\-(0[1-9]|1[012])\\-(0[1-9]|[12][0-9]|3[01])$')]),
       endDate: new FormControl('', [Validators.required, Validators.pattern('^\\d{4}\\-(0[1-9]|1[012])\\-(0[1-9]|[12][0-9]|3[01])$')]),
@@ -33,10 +33,27 @@ export class ContractCreateComponent implements OnInit {
     });
   }
 
+  getCustomerList() {
+    this.customerService.getAll().subscribe(customers => {
+      this.customers = customers;
+    });
+  }
+
+  getFacilityList() {
+    this.facilityService.getAll().subscribe(facilities => {
+      this.facilities = facilities;
+    });
+  }
+
   createContract() {
     if (this.contractForm.valid) {
-      this.contractService.saveContract(this.contractForm.value);
-      this.router.navigate(['/contract/contract-list']);
+      const contract = this.contractForm.value;
+      this.contractService.saveContract(contract).subscribe(() => {
+        alert('Create Successfully');
+        this.router.navigate(['/contract/contract-list']);
+      }, e => {
+        console.log(e);
+      });
     }
   }
 }

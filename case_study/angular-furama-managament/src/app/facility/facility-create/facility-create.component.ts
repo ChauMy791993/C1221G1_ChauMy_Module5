@@ -22,8 +22,8 @@ export class FacilityCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.facilityTypes = this.facilityTypeService.getAllFacilityType();
-    this.rentTypes = this.rentTypeService.getAllRentType();
+    this.getFacilityTypeList();
+    this.getRentTypeList();
     this.facilityForm = new FormGroup({
       facilityCode: new FormControl('', [Validators.required, Validators.pattern('^DV-\\d{4}$')]),
       facilityName: new FormControl('', [Validators.required, Validators.pattern('^[A-Za-z ]+$')]),
@@ -40,10 +40,27 @@ export class FacilityCreateComponent implements OnInit {
     });
   }
 
+  getFacilityTypeList() {
+    this.facilityTypeService.getAll().subscribe(facilityTypes => {
+      this.facilityTypes = facilityTypes;
+    });
+  }
+
+  getRentTypeList() {
+    this.rentTypeService.getAll().subscribe(rentTypes => {
+      this.rentTypes = rentTypes;
+    });
+  }
+
   createFacility() {
     if (this.facilityForm.valid) {
-      this.facilityService.saveFacility(this.facilityForm.value);
-      this.router.navigate(['/facility/facility-list']);
+      const facility = this.facilityForm.value;
+      this.facilityService.saveFacility(facility).subscribe(() => {
+        alert('Create Successfully');
+        this.router.navigate(['/facility/facility-list']);
+      }, e => {
+        console.log(e);
+      });
     }
   }
 }

@@ -17,7 +17,13 @@ export class FacilityListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.facilities = this.facilityService.getListFacility();
+    this.getAll();
+  }
+
+  getAll() {
+    this.facilityService.getAll().subscribe(facilities => {
+      this.facilities = facilities;
+    });
   }
 
   deleteModal(name: string, id: number) {
@@ -26,8 +32,9 @@ export class FacilityListComponent implements OnInit {
   }
 
   deleteFacility() {
-    this.facilityService.deleteFacility(this.idToDelete);
-    this.ngOnInit();
+    this.facilityService.deleteFacility(this.idToDelete).subscribe(() =>{
+      this.facilityService.deleteFacility(this.idToDelete);
+      this.ngOnInit();
+    });
   }
-
 }

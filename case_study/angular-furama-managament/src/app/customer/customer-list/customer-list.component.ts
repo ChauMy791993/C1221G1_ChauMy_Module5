@@ -8,7 +8,7 @@ import {CustomerService} from '../customer.service';
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
-  customers: Customer[] = [];
+  customers: Customer[];
   p = 1;
   nameToDelete: string;
   idToDelete: number;
@@ -17,7 +17,12 @@ export class CustomerListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.customers = this.customerService.getListCustomer();
+    this.getAll();
+  }
+  getAll() {
+    this.customerService.getAll().subscribe(customers => {
+      this.customers = customers;
+    });
   }
 
   deleteModal(name: string, id: number) {
@@ -26,8 +31,10 @@ export class CustomerListComponent implements OnInit {
   }
 
   deleteCustomer() {
-    this.customerService.deleteCustomer(this.idToDelete);
-    this.ngOnInit();
+    this.customerService.deleteCustomer(this.idToDelete).subscribe(() => {
+        this.customerService.deleteCustomer(this.idToDelete);
+        this.ngOnInit();
+      }
+    );
   }
-
 }

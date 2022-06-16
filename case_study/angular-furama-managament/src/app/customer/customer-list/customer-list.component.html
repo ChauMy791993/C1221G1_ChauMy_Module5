@@ -57,10 +57,10 @@
           </td>
           <td>
             <a type="button" class="btn btn-warning mb-2 w-100 text-white"
-               [routerLink]="['/customer/customer-edit',customer.customerId]">Edit</a>
+               [routerLink]="['/customer/customer-edit',customer.id]">Edit</a>
           </td>
           <td>
-            <a type="button" (click)="deleteModal(customer.customerName,customer.customerId)" class="btn btn-danger rounded mb-2 w-80" data-bs-toggle="modal"
+            <a type="button" (click)="deleteModal(customer.customerName,customer.id)" class="btn btn-danger rounded mb-2 w-80" data-bs-toggle="modal"
                data-bs-target="#exampleModal">
               Delete
             </a>

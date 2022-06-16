@@ -21,8 +21,16 @@ export class CustomerEditComponent implements OnInit {
               private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       this.customerId = +paramMap.get('id');
-      const customer = this.customerService.findById(this.customerId);
-      this.customerTypes = this.customerTypeService.getAllCustomerType();
+      this.getCustomer(this.customerId);
+    });
+  }
+
+  ngOnInit(): void {
+    this.getCustomerTypeList();
+  }
+
+  getCustomer(id: number) {
+    return this.customerService.findById(id).subscribe(customer => {
       this.customerForm = new FormGroup({
         customerCode: new FormControl(customer.customerCode, [Validators.required, Validators.pattern('^KH-\\d{4}$')]),
         customerName: new FormControl(customer.customerName, [Validators.required]),
@@ -37,15 +45,21 @@ export class CustomerEditComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  getCustomerTypeList() {
+    this.customerTypeService.getAll().subscribe(customerTypes => {
+      this.customerTypes = customerTypes;
+    });
   }
 
   updateCustomer(customerId: number) {
     this.submit = true;
     if (this.customerForm.valid) {
       this.submit = false;
-      this.customerService.updateCustomer(customerId, this.customerForm.value);
-      this.router.navigate(['/customer/customer-list']);
+      const customer = this.customerForm.value;
+      this.customerService.updateCustomer(customer).subscribe(() => {
+        alert('Update Successfully');
+        this.router.navigate(['/customer/customer-list']);
+      });
     }
   }
 

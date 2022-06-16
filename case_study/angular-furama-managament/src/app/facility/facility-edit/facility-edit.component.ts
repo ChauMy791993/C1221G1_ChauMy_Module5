@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {CustomerType} from '../../customer/model/customer-type';
 import {FacilityType} from '../model/facility-type';
 import {RentType} from '../model/rent-type';
 import {FacilityService} from '../facility.service';
@@ -24,9 +23,17 @@ export class FacilityEditComponent implements OnInit {
               private rentTypeService: RentTypeService, private activatedRouter: ActivatedRoute, private route: Router) {
     this.activatedRouter.paramMap.subscribe((param: ParamMap) => {
       this.facilityId = +param.get('id');
-      const facility = this.facilityService.findById(this.facilityId);
-      this.facilityTypes = this.facilityTypeService.getAllFacilityType();
-      this.rentTypes = this.rentTypeService.getAllRentType();
+      this.getFacility(this.facilityId);
+    });
+  }
+
+  ngOnInit(): void {
+    this.getFacilityTypeList();
+    this.getRentTypeList();
+  }
+
+  getFacility(id: number) {
+    return this.facilityService.findById(id).subscribe(facility => {
       this.facilityForm = new FormGroup({
         facilityCode: new FormControl(facility.facilityCode, [Validators.required, Validators.pattern('^DV-\\d{4}$')]),
         facilityName: new FormControl(facility.facilityName, [Validators.required, Validators.pattern('^[A-Za-z ]+$')]),
@@ -44,14 +51,28 @@ export class FacilityEditComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  getFacilityTypeList() {
+    this.facilityTypeService.getAll().subscribe(facilityTypes => {
+      this.facilityTypes = facilityTypes;
+    });
   }
+
+  getRentTypeList() {
+    this.rentTypeService.getAll().subscribe(rentTypes => {
+      this.rentTypes = rentTypes;
+    });
+  }
+
+
   updateFacility(facilityId: number) {
     this.submit = true;
     if (this.facilityForm.valid) {
       this.submit = false;
-      this.facilityService.updateFacility(facilityId, this.facilityForm.value);
-      this.route.navigate(['/facility/facility-list']);
+      const facility = this.facilityForm.value;
+      this.facilityService.updateFacility(facility).subscribe(() => {
+        alert('Update Successfully');
+        this.route.navigate(['/facility/facility-list']);
+      });
     }
   }
 

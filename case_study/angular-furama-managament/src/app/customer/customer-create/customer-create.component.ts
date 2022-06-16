@@ -20,7 +20,7 @@ export class CustomerCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.customerTypes = this.customerTypeService.getAllCustomerType();
+    this.getCustomerTypeList();
     this.customerForm = new FormGroup({
       customerCode: new FormControl('', [Validators.required, Validators.pattern('^KH-\\d{4}$')]),
       customerName: new FormControl('', [Validators.required]),
@@ -34,10 +34,22 @@ export class CustomerCreateComponent implements OnInit {
     });
   }
 
+  getCustomerTypeList() {
+    this.customerTypeService.getAll().subscribe(customerTypes => {
+      this.customerTypes = customerTypes;
+    });
+  }
+
   createCustomer() {
     if (this.customerForm.valid) {
-      this.customerService.saveCustomer(this.customerForm.value);
-      this.router.navigate(['/customer/customer-list']);
+      const customer = this.customerForm.value;
+      this.customerService.saveCustomer(customer).subscribe(() => {
+        alert('Create Successfully');
+        this.router.navigate(['/customer/customer-list']);
+      }, e => {
+        console.log(e);
+      });
     }
   }
 }
+
