@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Customer} from '../model/customer';
 import {CustomerService} from '../customer.service';
 
@@ -13,12 +13,18 @@ export class CustomerListComponent implements OnInit {
   nameToDelete: string;
   idToDelete: number;
 
+  @ViewChild('customerName') name: ElementRef;
+  @ViewChild('phone') phone: ElementRef;
+  @ViewChild('customerType') customerType: ElementRef;
+
   constructor(private customerService: CustomerService) {
   }
 
   ngOnInit(): void {
-    this.getAll();
+    // this.getAll();
+    this.customerService.search('', '', '').subscribe(customers => this.customers = customers);
   }
+
   getAll() {
     this.customerService.getAll().subscribe(customers => {
       this.customers = customers;
@@ -36,5 +42,12 @@ export class CustomerListComponent implements OnInit {
         this.ngOnInit();
       }
     );
+  }
+
+  search() {
+    this.customerService.search(this.name.nativeElement.value, this.phone.nativeElement.value,
+      this.customerType.nativeElement.value).subscribe(customers => {
+      this.customers = customers;
+    });
   }
 }

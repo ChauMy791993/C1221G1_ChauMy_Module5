@@ -35,6 +35,12 @@ export class CustomerService {
     return this.http.delete<Customer>(`${API_URL}/customers/${id}`);
   }
 
+  search(value: any, value2: any, value3: any): Observable<Customer[]> {
+    // tslint:disable-next-line:max-line-length
+    return this.http.get<Customer[]>
+    (`${API_URL}/customers?customerName_like=${value}&phone_like=${value2}&customerType.customerTypeName_like=${value3}`);
+  }
+
   // getListCustomer() {
   //   return this.customers;
   // }

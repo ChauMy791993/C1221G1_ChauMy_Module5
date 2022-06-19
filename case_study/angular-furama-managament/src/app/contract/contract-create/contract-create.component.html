@@ -73,6 +73,9 @@
                 <p style="color: red" *ngIf="contractForm.controls.endDate.hasError('pattern')&& contractForm.controls.endDate.touched">
                   Format: DD/MM/YYYY
                 </p>
+                <p style="color: red" *ngIf="contractForm.hasError('invalidDate')&& contractForm.controls.startDate.touched">
+                  End date must be after start date! Please choose again!
+                </p>
               </div>
               <div class="col-12">
                 <div class="form-floating">

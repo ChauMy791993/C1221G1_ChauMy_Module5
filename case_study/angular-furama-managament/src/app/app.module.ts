@@ -8,7 +8,7 @@ import {HomeComponent} from './home/home.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {NgxPaginationModule} from 'ngx-pagination';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -24,6 +24,7 @@ import {HttpClient} from '@angular/common/http';
     ReactiveFormsModule,
     AppRoutingModule,
     NgxPaginationModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
