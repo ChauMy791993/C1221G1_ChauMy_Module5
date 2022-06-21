@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CustomerService} from '../customer.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {Customer} from '../model/customer';
 import {CustomerTypeService} from '../customer-type.service';
 import {CustomerType} from '../model/customer-type';
 
@@ -32,6 +31,7 @@ export class CustomerEditComponent implements OnInit {
   getCustomer(id: number) {
     return this.customerService.findById(id).subscribe(customer => {
       this.customerForm = new FormGroup({
+        id: new FormControl(customer.id),
         customerCode: new FormControl(customer.customerCode, [Validators.required, Validators.pattern('^KH-\\d{4}$')]),
         customerName: new FormControl(customer.customerName, [Validators.required]),
         dateOfBirth: new FormControl(customer.dateOfBirth, [Validators.required, Validators.pattern('^\\d{4}-\\d{2}-\\d{2}$')]),

@@ -3,13 +3,13 @@
     {
       "id": 1,
       "customerCode": "KH-0001",
-      "customerName": "Nguyễn Thị Hào",
+      "customerName": "Nguyễn Thị Hào123",
       "dateOfBirth": "1970-11-07",
       "gender": 0,
       "idCard": "643431213",
       "phone": "0905423362",
-      "email": "thihao07@gmail.com",
       "address": "23 Nguyễn Hoàng, Đà Nẵng",
+      "email": "thihao07@gmail.com",
       "customerType": {
         "id": 5,
         "customerTypeName": "Member"

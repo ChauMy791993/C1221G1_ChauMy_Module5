@@ -1,0 +1,117 @@
+<!-- Page Header Start -->
+<div class="container-fluid page-header mb-5 p-0" style="background-image: url(../../../assets/img/carousel-1.jpg);">
+  <div class="container-fluid page-header-inner py-5">
+    <div class="container text-center pb-5">
+      <h1 class="display-3 text-white mb-3 animated slideInDown">Station</h1>
+    </div>
+  </div>
+</div>
+<!-- Page Header End -->
+
+
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h1 class="mb-5"><span class="text-primary text-uppercase">Station</span> List</h1>
+      <button class="custom-btn btn-12 mb-3 "><span
+        [routerLink]="['/station/station-create']">Click!</span><span>Add New</span>
+      </button>
+    </div>
+
+    <div class="container-fluid ">
+      <div class="form-inline my-lg-3 ">
+        <div class="row">
+          <div class="col-3">
+            <input class="form-control mr-sm-2" type="search" id="nameHouseCar" placeholder="nameHouseCar"
+                   aria-label="Search"
+                   name="nameHouseCar" #nameHouseCar>
+          </div>
+          <div class="col-3">
+            <input class="form-control mr-sm-2" type="search" id="arriveLocation" placeholder="arriveLocation" aria-label="Search"
+                   name="arriveLocation" #arriveLocation>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="search()">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- List Start -->
+    <div>
+      <table class="table table-striped mx-auto wow fadeInLeft " data-wow-delay="0.6s">
+        <thead>
+        <tr class="table-warning">
+          <th>#</th>
+          <th>Số xe</th>
+          <th>Loại xe</th>
+          <th>Tên nhà xe</th>
+          <th>Điểm đi</th>
+          <th>Điểm đến</th>
+          <th>Số điện thoại</th>
+          <th>Email</th>
+          <th>Giờ đi</th>
+          <th>Giờ đến</th>
+          <th class="text-center" colspan="3">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let station of stations|paginate : { itemsPerPage: 3, currentPage: p }; index as index">
+
+          <td>{{index + 1}}</td>
+          <td>{{station.code}}</td>
+          <td>{{station.typeCar}}</td>
+          <td>{{station.nameHouseCar}}</td>
+          <td>{{station.startLocation.name}}</td>
+          <td>{{station.startLocation.name}}</td>
+          <td>{{station.phone}}</td>
+          <td>{{station.email}}</td>
+          <td>{{station.timeStart}}</td>
+          <td>{{station.timeArrive}}</td>
+          <td>
+            <a type="button" class="btn btn-info mb-2 w-100 text-white"
+               [routerLink]="['/station/station-detail',station.id]">Detail</a>
+          </td>
+          <td>
+            <a type="button" class="btn btn-warning mb-2 w-100 text-white"
+               [routerLink]="['/station/station-edit',station.id]">Edit</a>
+          </td>
+          <td>
+            <a type="button" (click)="deleteModal(station.code,station.id)"
+               class="btn btn-danger rounded mb-2 w-100" data-bs-toggle="modal"
+               data-bs-target="#exampleModal">
+              Delete
+            </a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- List End -->
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete !</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có đồng ý xóa thông tin xe có số xe !</p>
+        <p class="text-danger">{{nameToDelete}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" (click)="deleteTransaction()" class="btn btn-primary" data-bs-dismiss="modal">Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="justify-content: space-around;display: flex;">
+  <pagination-controls (pageChange)="p = $event" class=" page-item"></pagination-controls>
+</div>

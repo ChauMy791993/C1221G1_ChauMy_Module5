@@ -1,0 +1,89 @@
+{
+  "locations": [
+      {
+        "id": 1,
+        "name": "Đà Nẵng"
+      },
+      {
+        "id": 2,
+        "name": "Quảng Nam"
+      },
+      {
+        "id": 3,
+        "name": "Quảng Ngãi"
+      },
+      {
+        "id": 4,
+        "name": "Huế"
+      },
+      {
+        "id": 5,
+        "name": "Bình Định"
+      },
+      {
+        "id": 6,
+        "name": "Khánh Hòa"
+      },
+      {
+        "id": 7,
+        "name": "TP. Hồ Chí Minh"
+      },
+      {
+        "id": 8,
+        "name": "Hà Nội"
+      }
+  ],
+  "stations": [
+    {
+      "code": 213,
+      "typeCar": "Giường nằm",
+      "nameHouseCar": "Mai Linh",
+      "startLocation": {
+        "id": 1,
+        "name": "Đà Nẵng"
+      },
+      "arriveLocation": {
+        "id": 2,
+        "name": "Quảng Nam"
+      },
+      "phone": "0905111265",
+      "email": "mailinh@gmail.com",
+      "timeStart": "08:00",
+      "timeArrive": "09:00"
+    },
+    {
+      "code": 213,
+      "typeCar": "Giường nằm",
+      "nameHouseCar": "Mai Linh",
+      "startLocation": {
+        "id": 1,
+        "name": "Đà Nẵng"
+      },
+      "arriveLocation": {
+        "id": 2,
+        "name": "Quảng Nam"
+      },
+      "phone": "0905111265",
+      "email": "mailinh@gmail.com",
+      "timeStart": "08:00",
+      "timeArrive": "09:00"
+    },
+    {
+      "code": 213,
+      "typeCar": "Giường nằm",
+      "nameHouseCar": "Mai Linh",
+      "startLocation": {
+        "id": 1,
+        "name": "Đà Nẵng"
+      },
+      "arriveLocation": {
+        "id": 2,
+        "name": "Quảng Nam"
+      },
+      "phone": "0905111265",
+      "email": "mailinh@gmail.com",
+      "timeStart": "08:00",
+      "timeArrive": "09:00"
+    }
+  ]
+}
