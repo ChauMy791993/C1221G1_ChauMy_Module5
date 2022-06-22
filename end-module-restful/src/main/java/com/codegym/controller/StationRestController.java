@@ -17,6 +17,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin
 @RestController
@@ -71,9 +72,8 @@ public class StationRestController {
 
 
 
-//    @GetMapping("/searchingStatione")
-//    public ResponseEntity<List<Station>> getVehicleList(@RequestParam Optional<String> vehicleName,
-//                                                        @RequestParam Optional<String> vehicleTypeId) {
+//    @GetMapping("/searchingStation")
+//    public ResponseEntity<List<Station>> getStationList(@RequestParam Optional<String> vehicleName) {
 //        String name = vehicleName.orElse("");
 //        String id = vehicleTypeId.orElse("%");
 //        List<Vehicle> vehicleSearchedList = this.vehicleService.searchBy(name,id);
