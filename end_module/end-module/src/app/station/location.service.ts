@@ -16,6 +16,6 @@ export class LocationService {
   }
 
   public getAll(): Observable<Location[]> {
-    return this.http.get<Location[]>(API_URL + '/locations');
+    return this.http.get<Location[]>(API_URL + '/locationRest/listLocation');
   }
 }

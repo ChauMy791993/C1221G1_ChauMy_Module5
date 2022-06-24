@@ -12,14 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@CrossOrigin()
+@CrossOrigin
 @RestController
-@RequestMapping("locationRest")
+@RequestMapping("/locationRest")
 public class LocationRestController {
+
     @Autowired
     private ILocationService iLocationService;
 
-    @GetMapping("")
+    @GetMapping("/listLocation")
     public ResponseEntity<List<Location>> getAll() {
         List<Location> locations = this.iLocationService.findAll();
         if (locations.isEmpty()) {

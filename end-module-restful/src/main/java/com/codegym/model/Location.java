@@ -1,23 +1,23 @@
 package com.codegym.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "location")
+@JsonIgnoreProperties({"startLocationList","arriveLocationList"})
 public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
 
-    @JsonBackReference
     @OneToMany(mappedBy = "startLocation")
     private List<Station> startLocationList;
 
-    @JsonBackReference
     @OneToMany(mappedBy = "arriveLocation")
     private List<Station> arriveLocationList;
 

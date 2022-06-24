@@ -1,8 +1,8 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {Transaction} from '../../transaction/model/transaction';
-import {TransactionService} from '../../transaction/transaction.service';
 import {Station} from '../model/station';
 import {StationService} from '../station.service';
+import {Location} from '../model/location';
+import {LocationService} from '../location.service';
 
 @Component({
   selector: 'app-station-list',
@@ -12,23 +12,34 @@ import {StationService} from '../station.service';
 export class StationListComponent implements OnInit {
 
   stations: Station[];
+  locations: Location[];
   p = 1;
   nameToDelete: string;
   idToDelete: number;
   @ViewChild('nameHouseCar') nameHouseCar: ElementRef;
   @ViewChild('arriveLocation') arriveLocation: ElementRef;
-  constructor(private stationService: StationService) {
+
+  constructor(private stationService: StationService, private locationService: LocationService) {
   }
 
   ngOnInit(): void {
     // this.getAll();
-    this.stationService.search('', '').subscribe(stations => this.stations = stations);
-
+    this.getAllLocation();
+    this.stationService.search('', '').subscribe(stations => {
+      this.stations = stations;
+      console.log(stations);
+    });
   }
 
   getAll() {
     this.stationService.getAll().subscribe(stations => {
       this.stations = stations;
+    });
+  }
+
+  getAllLocation() {
+    this.locationService.getAll().subscribe(locations => {
+      this.locations = locations;
     });
   }
 
@@ -46,8 +57,7 @@ export class StationListComponent implements OnInit {
   }
 
   search() {
-    this.stationService.search(this.nameHouseCar.nativeElement.value, this.arriveLocation.nativeElement.value).
-    subscribe(stations => {
+    this.stationService.search(this.nameHouseCar.nativeElement.value, this.arriveLocation.nativeElement.value).subscribe(stations => {
       this.stations = stations;
     });
   }

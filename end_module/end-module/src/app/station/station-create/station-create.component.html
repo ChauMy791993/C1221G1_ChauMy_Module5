@@ -53,7 +53,7 @@
                          placeholder="typeCar">
                   <label for="typeCar">Loại xe</label>
                   <p style="color: red"
-                     *ngIf="stationForm.controls.typeCar.hasError('required')&& (stationForm.controls.typeCar.touched || submit)">
+                     *ngIf="stationForm.controls.typeCar.hasError('required')&& (stationForm.controls.typeCar.touched)">
                     Not Null
                   </p>
                 </div>
@@ -64,7 +64,7 @@
                          placeholder="nameHouseCar">
                   <label for="nameHouseCar">Tên nhà xe</label>
                   <p style="color: red"
-                     *ngIf="stationForm.controls.nameHouseCar.hasError('required')&& (stationForm.controls.nameHouseCar.touched || submit)">
+                     *ngIf="stationForm.controls.nameHouseCar.hasError('required')&& (stationForm.controls.nameHouseCar.touched)">
                     Not Null
                   </p>
 
@@ -83,7 +83,7 @@
                     <option [ngValue]="id" *ngFor="let id of locations">{{id.name}}</option>
                   </select>
                   <label for="select1">Start Location</label>
-                  <p style="color: red" *ngIf="stationForm.controls.startLocation.hasError('required')&& (stationForm.controls.startLocation.touched || submit)">
+                  <p style="color: red" *ngIf="stationForm.controls.startLocation.hasError('required')&& (stationForm.controls.startLocation.touched)">
                     Not Null
                   </p>
                 </div>
@@ -96,7 +96,7 @@
                     <option [ngValue]="id" *ngFor="let id of locations">{{id.name}}</option>
                   </select>
                   <label for="select2">Arrive Location</label>
-                  <p style="color: red" *ngIf="stationForm.controls.arriveLocation.hasError('required')&& (stationForm.controls.arriveLocation.touched || submit)">
+                  <p style="color: red" *ngIf="stationForm.controls.arriveLocation.hasError('required')&& (stationForm.controls.arriveLocation.touched)">
                     Not Null
                   </p>
                 </div>
@@ -109,10 +109,10 @@
                   <input type="text" formControlName="phone" class="form-control" id="phone" placeholder="phone">
                   <label for="phone">Số điện thoại</label>
                   <p style="color: red"
-                     *ngIf="stationForm.controls.phone.hasError('required')&& (stationForm.controls.phone.touched || submit)">
+                     *ngIf="stationForm.controls.phone.hasError('required')&& (stationForm.controls.phone.touched)">
                     Not Null
                   </p>
-                  <p style="color: red" *ngIf="stationForm.controls.phone.hasError('pattern')&& (stationForm.controls.phone.touched || submit)">
+                  <p style="color: red" *ngIf="stationForm.controls.phone.hasError('pattern')&& (stationForm.controls.phone.touched)">
                     Format: 090xxxxxxx or 091xxxxxxx or 097xxxxxxx
                   </p>
                 </div>
@@ -122,10 +122,10 @@
                   <input type="text" formControlName="email" class="form-control" id="email" placeholder="email">
                   <label for="email">Email</label>
                   <p style="color: red"
-                     *ngIf="stationForm.controls.email.hasError('required')&& (stationForm.controls.email.touched || submit)">
+                     *ngIf="stationForm.controls.email.hasError('required')&& (stationForm.controls.email.touched)">
                     Not Null
                   </p>
-                  <p style="color: red" *ngIf="stationForm.controls.email.hasError('email')&& (stationForm.controls.email.touched || submit)">
+                  <p style="color: red" *ngIf="stationForm.controls.email.hasError('email')&& (stationForm.controls.email.touched)">
                     Email invalidate
                   </p>
                 </div>
@@ -136,10 +136,10 @@
                   <input type="time" formControlName="timeStart" class="form-control" id="timeStart" placeholder="timeStart">
                   <label for="timeStart">Giờ đi</label>
                   <p style="color: red"
-                     *ngIf="stationForm.controls.timeStart.hasError('required')&& (stationForm.controls.timeStart.touched || submit)">
+                     *ngIf="stationForm.controls.timeStart.hasError('required')&& (stationForm.controls.timeStart.touched)">
                     Not Null
                   </p>
-                  <p style="color: red" *ngIf="stationForm.controls.timeStart.hasError('pattern')&& (stationForm.controls.timeStart.touched || submit)">
+                  <p style="color: red" *ngIf="stationForm.controls.timeStart.hasError('pattern')&& (stationForm.controls.timeStart.touched)">
                     Format : HH:MM
                   </p>
                 </div>
@@ -149,10 +149,10 @@
                   <input type="time" formControlName="timeArrive" class="form-control" id="timeArrive" placeholder="timeArrive">
                   <label for="timeArrive">Giờ đến</label>
                   <p style="color: red"
-                     *ngIf="stationForm.controls.timeArrive.hasError('required')&& (stationForm.controls.timeArrive.touched || submit)">
+                     *ngIf="stationForm.controls.timeArrive.hasError('required')&& (stationForm.controls.timeArrive.touched)">
                     Not Null
                   </p>
-                  <p style="color: red" *ngIf="stationForm.controls.timeArrive.hasError('pattern')&& (stationForm.controls.timeArrive.touched || submit)">
+                  <p style="color: red" *ngIf="stationForm.controls.timeArrive.hasError('pattern')&& (stationForm.controls.timeArrive.touched)">
                     Format : HH:MM
                   </p>
                 </div>
@@ -160,7 +160,7 @@
 
               <div class="col-md-6">
                 <div class="form-floating">
-                  <button class="btn btn-primary w-100 py-3" type="submit">Sửa</button>
+                  <button class="btn btn-primary w-100 py-3" type="submit">Lưu</button>
                 </div>
               </div>
               <div class="col-md-6">

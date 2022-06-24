@@ -41,12 +41,12 @@ public class StationService implements IStationService {
     }
 
     @Override
-    public List<Station> searchBy(String name, String id) {
-        if (id.equals("")){
-            return this.iStationRepository.findAllByNameHouseCarAndStatus(name,true);
-        }else {
+    public List<Station> searchBy(String name, Integer id) {
+        if (id == null) {
+            return this.iStationRepository.findAllByNameHouseCarContainingAndStatus(name, true);
+        } else {
             return this.iStationRepository.findAllByNameHouseCarContainingAndArriveLocation_IdAndStatus
-                    (name, Integer.parseInt(id),true);
+                    (name, id, true);
         }
     }
 }

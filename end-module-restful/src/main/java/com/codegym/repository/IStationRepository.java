@@ -10,5 +10,5 @@ public interface IStationRepository extends JpaRepository<Station, Integer> {
 
     List<Station> findAllByNameHouseCarContainingAndArriveLocation_IdAndStatus(String name, Integer id, boolean status);
 
-    List<Station> findAllByNameHouseCarAndStatus(String name, boolean status);
+    List<Station> findAllByNameHouseCarContainingAndStatus(String name, boolean status);
 }

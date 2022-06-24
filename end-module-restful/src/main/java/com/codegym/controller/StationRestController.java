@@ -38,9 +38,12 @@ public class StationRestController {
 
 
     @PostMapping("/create")
-    public ResponseEntity<Void> createStation (@RequestBody Station station){
+    public ResponseEntity<Void> createStation(@RequestBody StationDto stationDto) {
+        Station station = new Station();
+        BeanUtils.copyProperties(stationDto, station);
         iStationService.save(station);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        System.out.println(station.getId());
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping(value = "/station/{id}")
@@ -53,15 +56,14 @@ public class StationRestController {
     }
 
 
-
     @PatchMapping("/edit/{id}")
-    public ResponseEntity<Void> updateStation (@RequestBody Station station){
+    public ResponseEntity<Void> updateStation(@RequestBody Station station) {
         iStationService.save(station);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteStation(@PathVariable Integer id){
+    public ResponseEntity<Void> deleteStation(@PathVariable Integer id) {
         Station station = iStationService.findById(id);
         if (station == null) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -71,18 +73,15 @@ public class StationRestController {
     }
 
 
-
-//    @GetMapping("/searchingStation")
-//    public ResponseEntity<List<Station>> getStationList(@RequestParam Optional<String> vehicleName) {
-//        String name = vehicleName.orElse("");
-//        String id = vehicleTypeId.orElse("%");
-//        List<Vehicle> vehicleSearchedList = this.vehicleService.searchBy(name,id);
-//        if (vehicleSearchedList.isEmpty()) {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        } else {
-//            return new ResponseEntity<>(vehicleSearchedList, HttpStatus.OK);
-//        }
-//    }
+    @GetMapping("/search")
+    public ResponseEntity<List<Station>> searchStation(@RequestParam Optional<String> nameHouseCar,
+                                                       @RequestParam Optional<Integer> arriveLocation) {
+        String name = nameHouseCar.orElse("");
+        Integer id = arriveLocation.orElse(null);
+        List<Station> stationSearchList = this.iStationService.searchBy(name, id);
+        System.out.println(stationSearchList);
+        return new ResponseEntity<>(stationSearchList, HttpStatus.OK);
+    }
 
 
 }

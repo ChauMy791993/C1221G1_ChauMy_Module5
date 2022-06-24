@@ -37,6 +37,6 @@ export class StationService {
   search(value: any, value2: any): Observable<Station[]> {
     // tslint:disable-next-line:max-line-length
     return this.http.get<Station[]>
-    (`${API_URL}/stations?nameHouseCar_like=${value}&location.name_like=${value2}`);
+    (`${API_URL}/stationRest/search?nameHouseCar=${value}&arriveLocation=${value2}`);
   }
 }

@@ -15,5 +15,5 @@ public interface IStationService {
 
     void delete(Station station);
 
-    List<Station> searchBy(String name, String id);
+    List<Station> searchBy(String name, Integer id);
 }
